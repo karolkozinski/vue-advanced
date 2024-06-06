@@ -1,5 +1,7 @@
 <template>
 <h1>{{title}}</h1>
+<input type="text" ref="name">
+<button @click="handleClick">Klikacz</button>
 </template>
 
 <script>
@@ -8,6 +10,12 @@ export default {
   data () {
     return {
       title: "vue appka"
+    }
+  },
+  methods: {
+    handleClick () {
+      console.log(this.$refs.name)
+      this.$refs.name.classList.add('kliniete')
     }
   }
 }
