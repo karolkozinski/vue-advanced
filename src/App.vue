@@ -1,23 +1,19 @@
 <template>
 <h1>{{title}}</h1>
-<input type="text" ref="name">
-<button @click="handleClick">Klikacz</button>
+<Modal />
 </template>
 
 <script>
+import Modal from './components/Modal.vue'
+
 export default {
   name: 'App',
+  components: { Modal },
   data () {
     return {
       title: "vue appka"
     }
   },
-  methods: {
-    handleClick () {
-      console.log(this.$refs.name)
-      this.$refs.name.classList.add('kliniete')
-    }
-  }
 }
 </script>
 
