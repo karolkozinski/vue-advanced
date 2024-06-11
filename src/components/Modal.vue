@@ -1,12 +1,20 @@
 <template>
     <div class="backdrop">
-        <div class="modal">
-            <p>content</p>
+        <div class="modal" :class="{sale: theme === 'sale'}">
+            <h1>{{header}}</h1>
+            <p>{{opis}}</p>
         </div>
     </div>
 </template>
-
-<style>
+<script>
+export default {
+    props: ['header', 'opis', 'theme']
+}
+</script>
+<style scoped>
+    h1 {
+        color: red;
+    }
     .modal {
         width: 400px;
         padding: 20px;
